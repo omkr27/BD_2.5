@@ -331,7 +331,7 @@ app.get('/products/filter/price', (req, res) => {
 
 //Endpoint 9
 app.get('/products', (req, res) => {
-  res.json(products);
+  res.json({products: sortedProducts});
 });
 
 app.listen(port, () => {
