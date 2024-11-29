@@ -250,7 +250,7 @@ function sortProductsByPriceDescending(product1, product2) {
 app.get('/products/sort/price-high-to-low', (req, res) => {
   let productsCopy = products.slice();
   let sortedProducts = productsCopy.sort(sortProductsByPriceDescending);
-  res.json(sortedProducts);
+  res.json({products: sortedProducts});
 });
 
 //function to return price low to high
@@ -262,7 +262,7 @@ function sortProductsByPriceAscending(product1, product2) {
 app.get('/products/sort/price-low-to-high', (req, res) => {
   let productsCopy = products.slice();
   let sortedProducts = productsCopy.sort(sortProductsByPriceAscending);
-  res.json(sortedProducts);
+  res.json({products: sortedProducts});
 });
 
 //function
